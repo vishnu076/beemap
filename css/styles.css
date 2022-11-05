@@ -2759,6 +2759,8 @@ img.u-pull-left {
  * ------------------------------------------------------------------- */
 .s-header {
     /* --logo-width : 9.6rem; */
+    display: flex;
+    align-self: center;
     z-index      : 100;
     width        : 100%;
     position     : absolute;
@@ -2792,7 +2794,7 @@ img.u-pull-left {
 }
 
 .s-header__logo img {
-    width          : var(--logo-width);
+    width          : var(--logo-width) !important;
     margin         : 0;
     vertical-align : bottom;
 }
@@ -2890,7 +2892,16 @@ img.u-pull-left {
         margin-right : 0.8rem;
     }
 }
-
+@media screen and (max-width : 500px) {
+    .s-header img{
+        height:3.5em;
+    }
+}
+@media screen and (max-width: 320px){
+    .s-header img{
+        height:2.5em;
+    }
+}
 
 
 /* ===================================================================
